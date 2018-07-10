@@ -14,6 +14,5 @@ Server listening on: http://0.0.0.0:8000
 ```
 
 ```
-$ curl http://localhost:8000/foo
-{"version": "1.0", "name": "http-demo-container", "url": "/foo"}
+$ open http://localhost:8000/foo
 ```
