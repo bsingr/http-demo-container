@@ -10,11 +10,14 @@ function handleRequest(request, response){
   })
   request.on('end', function() {
     response.statusCode = 200;
-    response.end(JSON.stringify({
-      version: VERSION,
-      app_name: APP_NAME,
-      url: request.url
-    }, 2));
+    response.end(`
+      <html>
+        <body>
+          <h1>Hello from ${APP_NAME}!</h1>
+          <p>The current application version is <strong>${VERSION}</strong>.</p>
+        </body>
+      </html>
+    `);
   });
 }
 
